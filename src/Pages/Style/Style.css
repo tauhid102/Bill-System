@@ -1,0 +1,14 @@
+.pagination button{
+    padding: 0 15px;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.pagination .selected{
+    background-color: #31D2F2;
+}
+.loginFrom{
+    box-shadow: 0px 0px 10px 10px lightgray;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
