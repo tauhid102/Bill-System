@@ -16,7 +16,7 @@ const BillSystem = () => {
     setBillInfo(newData);
   };
   const handleSubmitInfo = () => {
-    fetch("http://localhost:5000/api/add-billing", {
+    fetch("https://boxing-eds-53942.herokuapp.com/api/add-billing", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -31,7 +31,7 @@ const BillSystem = () => {
       });
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/api/billing-list?page=${page}`)
+    fetch(`https://boxing-eds-53942.herokuapp.com/api/billing-list?page=${page}`)
       .then((res) => res.json())
       .then((data) => {
         setLoadBillInfo(data.billInfo);
@@ -44,7 +44,7 @@ const BillSystem = () => {
   const handleDeleteStudent = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/api/delete-billing/${id}`;
+      const url = `https://boxing-eds-53942.herokuapp.com/api/delete-billing/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -59,7 +59,7 @@ const BillSystem = () => {
     }
   };
   useEffect(()=>{
-    fetch('http://localhost:5000/bill')
+    fetch('https://boxing-eds-53942.herokuapp.com/bill')
     .then(res=>res.json())
     .then(data=>setLoad(data))
   },[billInfo])

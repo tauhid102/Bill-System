@@ -10,7 +10,7 @@ const Modal = () => {
 
   useEffect(() => {
     const id=billId.id;
-    const url = `http://localhost:5000/api/billing/${id}`;
+    const url = `https://boxing-eds-53942.herokuapp.com/api/billing/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setBillInfo(data));
@@ -29,7 +29,7 @@ const Modal = () => {
     const item = {
       ...updateBillInfo,
     };
-    fetch(`http://localhost:5000/api/update-billing/${id}`, {
+    fetch(`https://boxing-eds-53942.herokuapp.com/api/update-billing/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
